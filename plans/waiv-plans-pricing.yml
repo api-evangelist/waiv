@@ -1,0 +1,23 @@
+generated: '2026-08-17'
+method: searched
+source: https://waiv.com/precision-testing/destra
+plan_count: 0
+plans: []
+note: >-
+  Waiv publishes no pricing, plans, or tiers of any kind. The full sitemap (82 URLs, fetched
+  2026-08-17) contains no /pricing or /plans page. Destra and the Destra API are sold through a
+  single undifferentiated "Get in contact" form at https://waiv.com/contact — the "Get Destra API"
+  call to action on the Destra product page links to that same form, and the form carries no
+  product, plan, or developer/integration option. As a CE-IVD marked in-vitro diagnostic sold to
+  laboratories, biopharma and clinicians, the commercial model is enterprise contract pricing.
+  This is a recorded zero, not an unchecked field.
+evidence:
+- url: https://waiv.com/precision-testing/destra
+  status: 200
+  finding: '"Get Destra API" CTA links to /contact; no price, tier, or quota stated.'
+- url: https://waiv.com/contact
+  status: 200
+  finding: Single general contact form, no plan selection; marketing@wearewaiv.com published.
+- url: https://waiv.com/sitemap.xml
+  status: 200
+  finding: 82 URLs, none matching /pricing, /plans, or /packages.

@@ -1,0 +1,38 @@
+generated: '2026-08-17'
+method: probed
+source: live GET of the /.well-known/ discovery surface on every Waiv host found in apis.yml
+note: >-
+  Every probed path returned 404. This file records a measured ABSENCE, not a served surface —
+  no WellKnown or SecurityTxt pointer is wired in apis.yml. waiv.com is a Webflow-hosted marketing
+  site; the /.well-known/* paths return the platform 404 (88-byte text body), and the site-level
+  404 page (9,370 bytes of HTML) is returned for non-well-known paths. wearewaiv.com 301-redirects
+  to waiv.com, so it shares the same surface.
+hosts:
+- host: https://waiv.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://wearewaiv.com
+  note: 301 redirect to https://waiv.com — same surface, no independent documents.
+  documents:
+  - path: /
+    status: 301
+- host: https://wearewaiv.github.io
+  note: GitHub Pages host for the first-party open-source histoboard project.
+  documents:
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /llms.txt
+    status: 404

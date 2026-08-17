@@ -1,0 +1,24 @@
+generated: '2026-08-17'
+method: searched
+source: https://waiv.com/precision-testing/destra
+limit_count: 0
+limits: []
+headers: []
+note: >-
+  No rate limits are documented, because no public API documentation exists. Waiv advertises a
+  "Destra API" for wiring its AI precision tests into a laboratory IMS/LIS, but the call to action
+  resolves to a general sales contact form. There is no developer portal, API reference, quickstart,
+  or machine-readable specification on any Waiv host, so there is no published limit, window, burst,
+  exhaustion status code, or RateLimit-* response header to record. This is a recorded zero from a
+  completed search, not an unchecked field. Re-check if Waiv publishes Destra API documentation.
+evidence:
+- url: https://waiv.com/precision-testing/destra
+  status: 200
+  finding: Destra API advertised; no technical documentation, auth model, or limits published.
+- url: https://waiv.com/openapi.json
+  status: 404
+- url: https://waiv.com/docs
+  status: 404
+- url: https://docs.waiv.com/
+  status: 0
+  finding: NXDOMAIN — no docs host exists.

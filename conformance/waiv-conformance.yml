@@ -1,0 +1,84 @@
+generated: '2026-08-17'
+method: searched
+source: https://waiv.com/news/waiv-achieves-dual-ce-marking-under-ivdr-propelling-ai-precision-testing-for-breast-and-colorectal-cancer-for-clinical-routine
+note: >-
+  Waiv's compliance posture is REGULATORY (medical device / health data), not API-technical. It
+  publishes no machine-readable API contract, so none of the cross-cutting API standards below can
+  be evidenced from a specification — they are recorded as not-established rather than as failures.
+  The regulatory entries are asserted by Waiv on its own site and are what the Compliance pointer
+  in apis.yml references.
+standards:
+- id: eu-ivdr-2017-746
+  name: EU In Vitro Diagnostic Regulation (IVDR)
+  conforms: true
+  evidence: >-
+    Waiv announced dual CE-IVD marking under IVDR for RlapsRisk BC and MSIntuit CRC on 2026-04-16.
+    Notified body and device class are not named on the public page.
+  source: https://waiv.com/news/waiv-achieves-dual-ce-marking-under-ivdr-propelling-ai-precision-testing-for-breast-and-colorectal-cancer-for-clinical-routine
+- id: ce-ivd-marking
+  name: CE-IVD marking
+  conforms: true
+  evidence: RlapsRisk BC (breast cancer) and MSIntuit CRC (colorectal cancer) are CE-IVD marked.
+  source: https://waiv.com/precision-testing/products
+- id: gdpr
+  name: EU General Data Protection Regulation
+  conforms: true
+  evidence: >-
+    Patient-data FAQ states Waiv "ensure[s] that adequate and appropriate safeguards are implemented,
+    as required by the GDPR", applies privacy by design, and uses pseudonymization/de-identification,
+    encryption and access control.
+  source: https://waiv.com/faqs/what-are-the-measures-implemented-by-waiv-and-its-partners-to-ensure-the-security-of-the-processing-of-patient-data
+- id: hds-health-data-hosting
+  name: French Health Data Hosting certification (Hébergeur de Données de Santé)
+  conforms: true
+  evidence: >-
+    "data from European centers is stored in Europe by providers certified under the French health
+    data hosting standard (HDS)" — certification is held by Waiv's hosting providers, not asserted
+    for Waiv itself.
+  source: https://waiv.com/faqs/what-are-the-measures-implemented-by-waiv-and-its-partners-to-ensure-the-security-of-the-processing-of-patient-data
+- id: uk-data-protection-act
+  conforms: true
+  evidence: Named in the patient-data FAQ as a safeguard basis for British patient data transfers.
+- id: swiss-data-protection-act
+  conforms: true
+  evidence: Named in the patient-data FAQ as a safeguard basis for Swiss patient data transfers.
+- id: iso-13485
+  conforms: null
+  evidence: Not published. A quality-management certification is implied by IVDR conformity assessment
+    but Waiv does not state it on any public page.
+- id: iso-27001
+  conforms: null
+  evidence: Not published anywhere on waiv.com; no trust center or security page exists.
+- id: soc2
+  conforms: null
+  evidence: Not published; no trust center exists.
+- id: hipaa
+  conforms: null
+  evidence: Not claimed. Waiv's published data-protection posture is EU/UK/Swiss, not US HIPAA.
+- id: oauth2
+  conforms: null
+  evidence: No published API specification or authentication documentation to evidence against.
+- id: oidc
+  conforms: null
+  evidence: /.well-known/openid-configuration returned 404 on waiv.com.
+- id: rfc9457-problem-details
+  conforms: null
+  evidence: No published API specification.
+- id: fhir-r4
+  conforms: null
+  evidence: >-
+    Not claimed. The Destra product page describes IMS/LIS interoperability and PDF/CSV/JSON result
+    export, and names Roche, Proscia, Sectra and Tribun Health as compatible systems, but does not
+    reference FHIR, HL7 v2, or DICOM.
+  source: https://waiv.com/precision-testing/destra
+- id: dicom
+  conforms: null
+  evidence: Not referenced on the Destra product page despite the whole-slide-imaging domain.
+compliance_program:
+  published: true
+  url: https://waiv.com/news/waiv-achieves-dual-ce-marking-under-ivdr-propelling-ai-precision-testing-for-breast-and-colorectal-cancer-for-clinical-routine
+  kind: regulatory
+  certifications:
+  - CE-IVD under EU IVDR (RlapsRisk BC)
+  - CE-IVD under EU IVDR (MSIntuit CRC)
+  trust_center: false

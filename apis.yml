@@ -1,18 +1,36 @@
 aid: waiv
 name: Waiv
-description: 'Waiv is a company surfaced as a portfolio company of serena and added to the API Evangelist
-  network as a stub for enrichment. Sector: ai-data. This profile is a lead awaiting the enrichment pipeline.'
+description: 'Waiv is a Paris-based AI precision-testing company spun out of Owkin (formerly Owkin Dx)
+  that builds clinically validated, AI-powered diagnostic tests for oncology and digital pathology. Its
+  products — RlapsRisk BC (breast-cancer distant-relapse risk), the MSIntuit Suite (MSI/dMMR pre-screening
+  in colorectal, gastric and endometrial cancer), BRCAura RUO (gBRCA pre-screening) and TLS Detect — read
+  routine H&E whole-slide images to accelerate biomarker detection, outcome prediction and treatment-response
+  assessment. The tests are delivered through Destra, an AI-native digital pathology platform that lab and
+  clinician users reach in the browser and that laboratories can wire into an existing IMS/LIS through the
+  Destra API. RlapsRisk BC and MSIntuit CRC hold dual CE-IVD marking under the EU IVDR. Waiv raised $33M
+  led by OTB Ventures and Alpha Intelligence Capital, with Serena, Karista and SistaFund participating,
+  and later closed $35M total with CRB Health Tech. The Destra API is advertised on the product page but
+  is sales-gated — there is no public developer portal, reference, or machine-readable specification.'
 url: https://raw.githubusercontent.com/api-evangelist/waiv/refs/heads/main/apis.yml
+image: https://cdn.prod.website-files.com/693aa5958f830a8ecab1c1eb/69aef2dbc9e80a879ba31dc1_open-graph-waiv-home.jpg
 x-type: company
 x-source: serena-portfolio
-x-tier: stub
-x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-08-17'
 modified: '2026-08-17'
 tags:
 - Company
 - Ai Data
+- Artificial Intelligence
+- Healthcare
+- Digital Pathology
+- Oncology
+- Medical Diagnostics
+- Precision Medicine
+- Biomarkers
+- Machine Learning
+- Life Sciences
+- Medical Imaging
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,4 +39,54 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://wearewaiv.com/
+  url: https://waiv.com/
+- type: Documentation
+  url: https://waiv.com/precision-testing/destra
+- type: Support
+  url: https://waiv.com/contact
+- type: Blog
+  url: https://waiv.com/news#Blog
+- type: GitHubOrganization
+  url: https://github.com/wearewaiv
+- type: TermsOfService
+  url: https://waiv.com/policies/terms-of-use
+- type: PrivacyPolicy
+  url: https://waiv.com/policies/privacy-policy
+- type: Compliance
+  url: https://waiv.com/news/waiv-achieves-dual-ce-marking-under-ivdr-propelling-ai-precision-testing-for-breast-and-colorectal-cancer-for-clinical-routine
+- type: Conformance
+  url: conformance/waiv-conformance.yml
+- type: DomainSecurity
+  url: security/waiv-domain-security.yml
+- type: LLMsTxt
+  url: llms/waiv-llms.txt
+- type: Plans
+  url: plans/waiv-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/waiv-rate-limits.yml
+x-enrichment:
+  date: '2026-08-17'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v1
+x-coverage:
+  state: gated
+  reason: sales-gate
+  detail: Waiv advertises a "Destra API" for wiring its CE-IVD marked AI pathology tests
+    into a laboratory IMS, but the "Get Destra API" button on the Destra product page
+    links to a single general "Get in contact" sales form with no developer or integration
+    option, and no docs host, developer portal, or specification exists on any Waiv domain.
+  evidence:
+  - url: https://waiv.com/precision-testing/destra
+    status: 200
+  - url: https://waiv.com/contact
+    status: 200
+  - url: https://waiv.com/openapi.json
+    status: 404
+  - url: https://waiv.com/docs
+    status: 404
+  - url: https://waiv.com/llms.txt
+    status: 404
+  - url: https://waiv.com/.well-known/agent-card.json
+    status: 404
+  checked: '2026-08-17'

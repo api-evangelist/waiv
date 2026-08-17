@@ -1,0 +1,33 @@
+generated: '2026-08-17'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: waiv.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 29 16:29:11 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+- host: wearewaiv.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct  3 13:39:44 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+  note: Legacy brand domain; 301 redirects to waiv.com. Still the published contact/mail
+    domain (marketing@wearewaiv.com).
+domains:
+- domain: waiv.com
+  dnssec: false
+  caa: []
+  spf: false
+  dmarc: false
+  note: Current canonical web domain. No SPF or DMARC TXT record was returned on probe,
+    while the legacy wearewaiv.com domain publishes both — the email posture has not
+    followed the domain rename.
+- domain: wearewaiv.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: quarantine
