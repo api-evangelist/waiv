@@ -15,7 +15,7 @@ url: https://raw.githubusercontent.com/api-evangelist/waiv/refs/heads/main/apis.
 image: https://cdn.prod.website-files.com/693aa5958f830a8ecab1c1eb/69aef2dbc9e80a879ba31dc1_open-graph-waiv-home.jpg
 x-type: company
 x-source: serena-portfolio
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-08-17'
 modified: '2026-08-17'
 tags:
