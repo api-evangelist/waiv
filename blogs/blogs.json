@@ -1,0 +1,14 @@
+{
+  "repo": "waiv",
+  "feeds": [
+    {
+      "source": "https://waiv.com/contact",
+      "feed_url": "https://waiv.com/contact",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-08-22T20:20:02Z"
+}
