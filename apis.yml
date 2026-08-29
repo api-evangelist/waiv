@@ -12,6 +12,17 @@ description: 'Waiv is a Paris-based AI precision-testing company spun out of Owk
   and later closed $35M total with CRB Health Tech. The Destra API is advertised on the product page but
   is sales-gated — there is no public developer portal, reference, or machine-readable specification.'
 url: https://raw.githubusercontent.com/api-evangelist/waiv/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://cdn.prod.website-files.com/693aa5958f830a8ecab1c1eb/69aef2dbc9e80a879ba31dc1_open-graph-waiv-home.jpg
 x-type: company
 x-source: serena-portfolio
